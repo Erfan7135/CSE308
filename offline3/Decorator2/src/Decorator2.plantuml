@@ -1,0 +1,46 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class AppetizerDecorator
+class BeefBurger
+class Burger
+class BurgerDecorator
+class ChickenBurger
+class CoffeeDecorator
+class CokeDecorator
+class DrinksDecorator
+class FrenchFriesDecorator
+interface Item << interface >>
+interface Item << interface >>
+class Main
+class Meal
+class Mozzarella
+class NoDecorator
+class NoneDecorator
+class NoneDecorator
+class OnionRingsDecorator
+class Slices
+class VeggiBurger
+class WaterDecorator
+
+AppetizerDecorator    -[#000082,plain]-^  DrinksDecorator      
+BeefBurger            -[#000082,plain]-^  Burger               
+Burger                -[#008200,dashed]-^  Item                 
+BurgerDecorator       -[#000082,plain]-^  Burger               
+ChickenBurger         -[#000082,plain]-^  Burger               
+CoffeeDecorator       -[#000082,plain]-^  DrinksDecorator      
+CokeDecorator         -[#000082,plain]-^  DrinksDecorator      
+DrinksDecorator       -[#000082,plain]-^  BurgerDecorator      
+FrenchFriesDecorator  -[#000082,plain]-^  AppetizerDecorator   
+Mozzarella            -[#000082,plain]-^  BurgerDecorator      
+NoDecorator           -[#000082,plain]-^  BurgerDecorator      
+NoneDecorator         -[#000082,plain]-^  AppetizerDecorator   
+NoneDecorator         -[#000082,plain]-^  DrinksDecorator      
+OnionRingsDecorator   -[#000082,plain]-^  AppetizerDecorator   
+Slices                -[#000082,plain]-^  BurgerDecorator      
+VeggiBurger           -[#000082,plain]-^  Burger               
+WaterDecorator        -[#000082,plain]-^  DrinksDecorator      
+@enduml
